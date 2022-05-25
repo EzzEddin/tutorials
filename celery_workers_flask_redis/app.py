@@ -15,6 +15,6 @@ def add(x, y):
 
 @app.route('/')
 def add_task():
-    for i in range(10):
+    for i in range(10000):
         add.delay(i, i)
     return jsonify({'status': 'ok'})
